@@ -31,6 +31,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
         \App\Models\Topic::observe(\App\Observers\TopicObserver::class);
         Reply::observe(ReplyObserver::class);
+        \App\Models\Link::observe(\App\Observers\LinkObserver::class);
         //
     }
 }
